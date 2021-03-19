@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "c02", "c02\c02.vcxproj", "{034256D5-F6B8-40B1-B256-B6E7F81D9C17}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hello world", "c02\c02.vcxproj", "{034256D5-F6B8-40B1-B256-B6E7F81D9C17}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "예제2-2", "예제2-2\예제2-2.vcxproj", "{19C780F7-06A5-4C52-8B7B-6ED39E87B9F9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "에제2-3", "에제2-3\에제2-3.vcxproj", "{A6662AD1-DEC2-446A-BEEA-168A2AAE94BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,14 @@ Global
 		{19C780F7-06A5-4C52-8B7B-6ED39E87B9F9}.Release|x64.Build.0 = Release|x64
 		{19C780F7-06A5-4C52-8B7B-6ED39E87B9F9}.Release|x86.ActiveCfg = Release|Win32
 		{19C780F7-06A5-4C52-8B7B-6ED39E87B9F9}.Release|x86.Build.0 = Release|Win32
+		{A6662AD1-DEC2-446A-BEEA-168A2AAE94BC}.Debug|x64.ActiveCfg = Debug|x64
+		{A6662AD1-DEC2-446A-BEEA-168A2AAE94BC}.Debug|x64.Build.0 = Debug|x64
+		{A6662AD1-DEC2-446A-BEEA-168A2AAE94BC}.Debug|x86.ActiveCfg = Debug|Win32
+		{A6662AD1-DEC2-446A-BEEA-168A2AAE94BC}.Debug|x86.Build.0 = Debug|Win32
+		{A6662AD1-DEC2-446A-BEEA-168A2AAE94BC}.Release|x64.ActiveCfg = Release|x64
+		{A6662AD1-DEC2-446A-BEEA-168A2AAE94BC}.Release|x64.Build.0 = Release|x64
+		{A6662AD1-DEC2-446A-BEEA-168A2AAE94BC}.Release|x86.ActiveCfg = Release|Win32
+		{A6662AD1-DEC2-446A-BEEA-168A2AAE94BC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
