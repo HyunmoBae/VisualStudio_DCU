@@ -11,13 +11,13 @@ struct employee {
 void main() {
 	struct employee Lee;
 	struct employee* Sptr = &Lee;
-	strcpy_s(Sptr->name, "ÀÌ¼ø½Å");
+	strcpy_s(Sptr->name, "ì´ìˆœì‹ ");
 	Sptr->year = 2015;
 	Sptr->pay = 5900;
 
-	printf("\nÀÌ¸§ : %s", Sptr->name);
-	printf("\nÀÔ»ç : %d", Sptr->year);
-	printf("\n¿¬ºÀ : %d", Sptr->pay);
+	printf("\nÃ€ÃŒÂ¸Â§ : %s", Sptr->name);
+	printf("\nÃ€Ã”Â»Ã§ : %d", Sptr->year);
+	printf("\nÂ¿Â¬ÂºÃ€ : %d", Sptr->pay);
 
 
 	getchar();
