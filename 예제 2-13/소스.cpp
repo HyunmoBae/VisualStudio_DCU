@@ -19,5 +19,6 @@ void main() {
 	printf("\nÀÔ»ç : %d", Sptr->year);
 	printf("\n¿¬ºÀ : %d", Sptr->pay);
 
+
 	getchar();
 }
