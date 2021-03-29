@@ -15,9 +15,9 @@ void main() {
 	Sptr->year = 2015;
 	Sptr->pay = 5900;
 
-	printf("\nÀÌ¸§ : %s", Sptr->name);
-	printf("\nÀÔ»ç : %d", Sptr->year);
-	printf("\n¿¬ºÀ : %d", Sptr->pay);
+	printf("\n이름 : %s", Sptr->name);
+	printf("\n입사 : %d", Sptr->year);
+	printf("\n연봉 : %d", Sptr->pay);
 
 
 	getchar();
