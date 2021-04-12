@@ -33,16 +33,16 @@ void printList(linkedList_h* CL) {
 void insertFirstNode(linkedList_h* CL, const char* x) {
 	listNode* newNode, * temp;
 	newNode = (listNode*)malloc(sizeof(listNode));
-	strcpy(newNode->data, x);
-	if (CL->head = NULL) {
+	strcpy_s(newNode->data, x);
+	if (CL->head == NULL) {
 		CL->head = newNode;
 	}
 	else {
-		temp - CL->head;
+		temp = CL->head;
 		while (temp->link != CL->head)
 			temp = temp->link;
 		newNode->link = temp->link;
-		temp->link = newNode;
+		newNode = temp->link;
 		CL->head = newNode;
 	}
 }
@@ -50,7 +50,7 @@ void insertFirstNode(linkedList_h* CL, const char* x) {
 void insertMiddleNode(linkedList_h* CL, listNode* pre, const char* x) {
 	listNode* newNode;
 	newNode = (listNode*)malloc(sizeof(listNode));
-	strcpy(newNode->data, x);
+	strcpy_s(newNode->data, x);
 	if (CL == NULL) {
 		CL->head = newNode;
 		newNode->link = newNode;
@@ -100,23 +100,22 @@ int main() {
 	listNode* p;
 	CL = createLinkedList_h();
 	printf("(1)원형 연결 리스트 생성하기!\n");
-	getchar();
 
 	printf("(2) 원형 연결 리스트에 [월] 노드 삽입하기! \n");
 	insertFirstNode(CL, "월");
-	printList(CL); getchar();
+	printList(CL); 
 
 	printf("(3) 원형 연결 리스트의 [월] 노드 뒤에 [수] 노드 삽입하기! \n");
 	p = searchNode(CL, "월"); insertMiddleNode(CL, p, "금");
-	printList(CL); getchar();
+	printList(CL);
 
 	printf("(4) 원형 연결 리스트의 [수] 노드 뒤에 [금] 노드 삽입하기!\n");
 	p = searchNode(CL, "수"); insertMiddleNode(CL, p, "금");
-	printList(CL); getchar();
+	printList(CL);
 
 	printf("(5) 원형 연결 리스트에서 [수] 노드 삭제하기!\n");
-	p = searchNode(CL); deleteNode(CL, p);
-	printList(CL); getchar();
+	p = searchNode(CL, "수"); deleteNode(CL, p);
+	printList(CL);
 
 	return 0;
 }
