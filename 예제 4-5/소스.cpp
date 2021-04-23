@@ -100,6 +100,6 @@ void main(void) {
 	
 	printPoly(C);
 
-	getchar()
+	getchar();
 
 }

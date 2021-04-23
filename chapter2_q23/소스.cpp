@@ -31,20 +31,18 @@ int main(void) {
 			continue;
 		case 2:
 			printf("\n\n이름 : ");
-			getchar();
-			gets_s(Addbook[j].name);
+			scanf("%s", Addbook[j].name);
 			printf("전화번호 : ");
-			gets_s(Addbook[j].phoneNum);
+			scanf("%s", Addbook[j].phoneNum);
 			printf("주소 : ");
-			gets_s(Addbook[j].address);
+			scanf("%s", Addbook[j].address);
 			printf("생일 : ");
-			gets_s(Addbook[j].birthday);
+			scanf("%s", Addbook[j].birthday);
 			j++;
 			continue;
 		case 3:
 			printf("\n찾을 이름을 검색하세요 : ");
-			getchar();
-			gets_s(fname);
+			scanf("%s", fname);
 			for (i = 0; i < j; i++) {
 				if (strcmp(fname, Addbook[i].name) == 0) {
 					printf("\n\n이름\t\t\t\t전화번호\t\t\t주소\t\t\t생일\n");
@@ -61,8 +59,7 @@ int main(void) {
 			continue;
 		case 4:
 			printf("\n\n삭제할 이름을 입력하세요 : ");
-			getchar();
-			gets_s(fname);
+			scanf("%s", fname);
 			for (i = 0; i < j; i++) {
 				if (strcmp(fname, Addbook[i].name) == 0) {
 					Addbook[i] = { NULL };

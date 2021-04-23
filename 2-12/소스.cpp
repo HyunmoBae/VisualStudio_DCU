@@ -23,6 +23,5 @@ int main(void) {
 		printf("\n¿¬ºÀ : %d\n", LEE[i].pay);
 
 	}
-	getchar();
 
 }

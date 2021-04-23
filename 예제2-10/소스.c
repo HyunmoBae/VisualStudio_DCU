@@ -14,6 +14,5 @@ int main(void)
 		printf("\n %s", ptrArray[i]);
 	}
 
-	getchar();
 	return 0;
 }
