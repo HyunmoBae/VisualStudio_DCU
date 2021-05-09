@@ -1,6 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define STACK_SIZE 100
+
+typedef int element;
+
+element stack[STACK_SIZE];
+
+typedef struct StackNode {
+	element data;
+	struct StackNode* link;
+} stackNode;
+
+stackNode *top;
 
 typedef struct ListNode {
 	char data[4];
@@ -107,23 +119,67 @@ listNode* searchNode(linkedList_h* L, const char* x) {
 	return temp;
 }
 
-void reverse(linkedList_h* L) {
-	listNode* p;
-	listNode* q;
-	listNode* r;
+void push(element item) {
 
-	p = L->head;
-	q = NULL;
-	r = NULL;
+	stackNode* temp = (stackNode*)malloc(sizeof(stackNode));
+	temp->data = item;
+	temp->link = top;
+	top = temp;
+}
 
-	while (p != NULL) {
-		r = q;
-		q = p;
-		p = p->link;
-		q->link = r;
+element pop() {
+	element item;
+	stackNode* temp = top;
+
+	if (top == NULL) {
+		printf("\n STACK is empty");
+		return 0;
+	}
+	else {
+		item = temp->data;
+		top = temp->link;
+		free(temp);
+		return item;
+	}
+}
+element peek() {
+	if (top == NULL) {
+		printf("\n\n Stack is empty! \n");
+		return 0;
+	}
+	else {
+		return(top->data);
 
 	}
-	L->head = q;
+}
+
+
+void reverse(linkedList_h* L) {
+
+	element	p;
+	element q;
+	element r;
+	element item;
+
+	push(p);
+	push(q);
+	push(r);
+
+	listNode* t;
+	t = searchNode(L, "월");
+	deleteNode(L, t);
+	t = searchNode(L, "수");
+	deleteNode(L, t);
+	t = searchNode(L, "금");
+	deleteNode(L, t);
+
+
+	item = peek();
+	insertFirstNode(L, (char*)item);
+	pop();
+	insertFirstNode(L, (char*)item);
+	pop();
+	insertFirstNode(L, (char*)item);
 }
 
 int main() {
@@ -133,14 +189,14 @@ int main() {
 	printf("(1) 리스트에 [월], [수], [일] 노드 삽입하기! \n");
 	insertLastNode(L, "월"); insertLastNode(L, "수"); insertLastNode(L, "일");
 	printList(L); getchar();
-	
+
 	printf("(2)리스트에서 [수] 노드 탐색하기! \n");
 	p = searchNode(L, "수");
 	if (p == NULL)
 		printf("찾는 데이터가 없습니다.\n");
 
 	else printf("[%s]를 찾았습니다.\n", p->data);
-		getchar();
+	getchar();
 
 	printf("(3)리스트에서 [수] 뒤에 [금] 노드 삽입하기!\n");
 	insertMiddleNode(L, p, "금");
