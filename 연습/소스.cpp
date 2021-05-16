@@ -1,11 +1,20 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char* mm();
+
 
 int main() {
+	char* p;
+	p = mm();
+	strcpy(p, "Hello");
+	printf("%s\n", p);
 
-	int i, j = 10;
-	int* p1;
-	char* p2;;
+}
 
-	p2 = &j;
-
+char* mm() {
+	char* p;
+	p = (char*)malloc(sizeof(char) * 10);
+	return p;
 }
